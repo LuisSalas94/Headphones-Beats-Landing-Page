@@ -1,0 +1,142 @@
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline: none;
+	transition: all 0.2s linear;
+	text-transform: capitalize;
+}
+
+:root {
+	--blue: #2273f8;
+	--gray: #333333;
+	--white: #ffffff;
+}
+
+*::selection {
+	background: var(--blue);
+	color: #fff;
+}
+
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+/********************************** Utilities  ******************************************** */
+
+section {
+	padding: 0 5%;
+}
+
+/* ********************************* Header Section  *************************************** */
+header {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	padding: 2rem 7%;
+	background-color: var(--blue);
+}
+
+header .logo img {
+	width: 40px;
+	height: 40px;
+}
+
+header .navbar ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header .navbar ul li a {
+	font-size: 2rem;
+	margin-left: 2rem;
+	color: #fff;
+	position: relative;
+}
+
+header .navbar ul li a::before {
+	content: "";
+	position: absolute;
+	bottom: -0.5rem;
+	right: 0;
+	width: 0%;
+	height: 0.2rem;
+	background: #fff;
+	transition: 0.2s linear;
+}
+
+header .navbar ul li a.active::before,
+header .navbar ul li a:hover::before {
+	left: 0;
+	width: 100%;
+}
+
+header #menu {
+	font-size: 3rem;
+	color: #fff;
+	cursor: pointer;
+	display: none;
+}
+
+/* **************************** Media Queries *************************************** */
+@media screen and (max-width: 768px) {
+	html {
+		font-size: 55%;
+	}
+
+	header #menu {
+		display: block;
+	}
+
+	header .navbar {
+		position: fixed;
+		/* 	top: 7.4rem; */
+		top: -120%;
+		left: 0;
+		width: 100%;
+		background: var(--white);
+		opacity: 0;
+	}
+
+	header .navbar ul {
+		padding: 2rem 0;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	header .navbar ul li a {
+		font-size: 2.5rem;
+		color: var(--gray);
+		display: block;
+		margin: 1rem 0;
+	}
+
+	header .navbar ul li a::before {
+		background: #333;
+	}
+
+	.fa-times {
+		transform: rotate(180deg);
+	}
+
+	header .navbar.nav-toggle {
+		top: 7.4rem;
+		opacity: 1;
+	}
+}
