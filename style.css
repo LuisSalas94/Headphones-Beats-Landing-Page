@@ -64,6 +64,13 @@ section {
 	cursor: pointer;
 }
 
+.title {
+	font-size: 4rem;
+	color: var(--gray);
+	padding: 0 1rem;
+	text-align: center;
+}
+
 /* ********************************* Header Section  *************************************** */
 header {
 	width: 100%;
@@ -226,6 +233,67 @@ header #menu {
 	color: var(--blue);
 }
 
+/* ********************************* Feature Section  ******************************* */
+.features {
+	min-height: 80vh;
+	text-align: center;
+	padding: 5rem 0;
+}
+
+.features .description {
+	padding: 2rem 0;
+	margin: 0 auto;
+	width: 70rem;
+	color: #666;
+	font-size: 1.5rem;
+	line-height: 1.4;
+}
+
+.features .box-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.features .box-container .box {
+	width: 28rem;
+	margin: 2rem;
+	position: relative;
+	z-index: 0;
+}
+
+.features .box-container .box::before {
+	content: "";
+	position: absolute;
+	top: 28.5%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	background: var(--blue);
+	height: 10rem;
+	width: 10rem;
+	z-index: -1;
+	box-shadow: 0 0 0 1rem rgba(0, 0, 255, 0.1);
+}
+
+.features .box-container .box i {
+	color: #fff;
+	font-size: 4.5rem;
+	margin: 8rem 0;
+}
+
+.features .box-container .box h3 {
+	color: var(--gray);
+	font-size: 2rem;
+}
+
+.features .box-container .box p {
+	color: #666;
+	font-size: 1.2rem;
+	padding: 1.5rem 0;
+	line-height: 1.5;
+}
+
 /* **************************** Media Queries *************************************** */
 @media screen and (max-width: 768px) {
 	html {
@@ -276,6 +344,12 @@ header #menu {
 	/* home section */
 	.home .content {
 		text-align: center;
+	}
+
+	/* features section */
+	.features .description {
+		width: auto;
+		padding: 1.2rem;
 	}
 }
 

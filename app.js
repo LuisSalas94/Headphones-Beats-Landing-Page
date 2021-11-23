@@ -4,7 +4,7 @@ $(document).ready(function () {
 		$(".navbar").toggleClass("nav-toggle");
 	});
 
-	/* 	$(window).on("load scroll", function () {
+	$(window).on("load scroll", function () {
 		$("#menu").removeClass("fa-times");
 		$(".navbar").removeClass("nav-toggle");
 		$("section").each(function () {
@@ -17,7 +17,7 @@ $(document).ready(function () {
 				$(".navbar").find(`[href="#${id}"]`).addClass("active");
 			}
 		});
-	}); */
+	});
 
 	/* FAQ section */
 	/* 	$(".accordion-heading").click(function () {
