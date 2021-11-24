@@ -350,6 +350,60 @@ header #menu {
 	display: block;
 }
 
+/* ********************************* FAQ Section  ******************************* */
+.faq {
+	min-height: 100vh;
+	text-align: center;
+	padding: 5rem 5%;
+}
+
+.faq .row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.faq .row .image {
+	flex: 1 1 40rem;
+	padding: 0.5rem;
+}
+
+.faq .row .image img {
+	height: 65vh;
+	width: 100%;
+}
+
+.faq .row .accordion-container {
+	flex: 1 1 40rem;
+	padding: 1rem;
+}
+
+.faq .row .accordion-container .accordion {
+	text-align: left;
+	padding: 0.5rem 0;
+}
+
+.faq .row .accordion-container .accordion .accordion-heading {
+	color: #fff;
+	background: var(--blue);
+	padding: 1rem;
+	font-size: 1.8rem;
+	cursor: pointer;
+}
+
+.faq .row .accordion-container .accordion .accordion-content {
+	color: var(--gray);
+	padding: 1rem;
+	font-size: 1.3rem;
+	border: 0.2rem solid var(--blue);
+	display: none;
+}
+
+.faq .row .accordion-container .accordion:nth-child(1) .accordion-content {
+	display: block;
+}
+
 /* **************************** Media Queries *************************************** */
 @media screen and (max-width: 768px) {
 	html {

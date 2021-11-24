@@ -20,9 +20,9 @@ $(document).ready(function () {
 	});
 
 	/* FAQ section */
-	/* 	$(".accordion-heading").click(function () {
+	$(".accordion-heading").click(function () {
 		$(".accordion .accordion-content").slideUp();
 
 		$(this).next(".accordion-content").slideDown();
-	}); */
+	});
 });
