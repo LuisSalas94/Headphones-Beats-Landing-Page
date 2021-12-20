@@ -14,7 +14,7 @@ Fully responsive landing page
 
 ## Live Demo
 
-[Live Demo Link](https://nervous-einstein-321962.netlify.app/)
+[Live Demo Link](https://agitated-goldstine-657078.netlify.app/)
 
 ## Author
 
